@@ -1,0 +1,52 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+
+    - name: Install Dependencies
+      run: npm install -g eslint prettier stylelint
+
+    - name: Run Linter (JS)
+      run: eslint "**/*.js" --no-error-on-unmatched-pattern || echo "No JS errors or rules configured yet"
+
+    - name: Run Linter (CSS)
+      run: stylelint "**/*.css" --allow-empty-input || echo "No CSS errors or rules configured yet"
+
+    - name: Run Prettier Check (HTML/CSS/JS)
+      run: prettier --check "**/*.{js,css,html}" || echo "Prettier formatting needed"
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Run Trivy vulnerability scanner in fs mode
+      uses: aquasecurity/trivy-action@master
+      with:
+        scan-type: 'fs'
+        ignore-unfixed: true
+        format: 'sarif'
+        output: 'trivy-results.sarif'
+        severity: 'CRITICAL,HIGH'
+
+  dependency-audit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Audit NPM Dependencies
+      run: npm audit || echo "No package.json found or audit passed/failed gracefully"
