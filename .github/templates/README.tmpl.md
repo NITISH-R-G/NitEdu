@@ -13,47 +13,22 @@ This repository is autonomously analyzed and documented by GitHub Actions and AI
 
 ### Component Diagram
 ```mermaid
-graph LR;
-    subgraph Frontend
-        HTML[HTML Pages]
-        CSS[Stylesheets]
-        JS[JavaScript Scripts]
-    end
-    HTML --> CSS
-    HTML --> JS
-
+{{ arch_mermaid }}
 ```
 
 ### Dependency Map
 ```mermaid
-graph TD;
-    "enroll.html" --> "style.css";
-    "enroll.html" --> "script.js";
-    "mentors.html" --> "style.css";
-    "mentors.html" --> "script.js";
-    "index.html" --> "style.css";
-    "index.html" --> "script.js";
-
+{{ deps_mermaid }}
 ```
 
 ## 📊 Repository Structure
 
-The repository contains 3 HTML files, 1 CSS files, and 1 JS files.
+The repository contains {{ stats.html_files }} HTML files, {{ stats.css_files }} CSS files, and {{ stats.js_files }} JS files.
 
 **Source Files Detected:**
-
-- `enroll.html`
-
-- `mentors.html`
-
-- `script.js`
-
-- `index.html`
-
-- `style.css`
-
-- `README.md`
-
+{% for file in files %}
+- `{{ file }}`
+{% endfor %}
 
 ## 🚀 Setup & Deployment
 
