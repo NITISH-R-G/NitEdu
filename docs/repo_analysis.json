@@ -2,10 +2,10 @@
   "files": [
     "enroll.html",
     "mentors.html",
-    "script.js",
     "index.html",
-    "style.css",
-    "README.md"
+    "script.js",
+    "README.md",
+    "style.css"
   ],
   "directories": [],
   "dependencies": [

@@ -21,7 +21,7 @@ graph LR;
     end
     HTML --> CSS
     HTML --> JS
-
+    
 ```
 
 ### Dependency Map
@@ -46,13 +46,13 @@ The repository contains 3 HTML files, 1 CSS files, and 1 JS files.
 
 - `mentors.html`
 
-- `script.js`
-
 - `index.html`
 
-- `style.css`
+- `script.js`
 
 - `README.md`
+
+- `style.css`
 
 
 ## 🚀 Setup & Deployment
