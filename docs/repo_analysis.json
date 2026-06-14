@@ -1,11 +1,11 @@
 {
   "files": [
+    "README.md",
     "enroll.html",
     "mentors.html",
-    "index.html",
     "script.js",
-    "README.md",
-    "style.css"
+    "style.css",
+    "index.html"
   ],
   "directories": [],
   "dependencies": [

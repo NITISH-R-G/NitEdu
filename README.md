@@ -42,17 +42,17 @@ The repository contains 3 HTML files, 1 CSS files, and 1 JS files.
 
 **Source Files Detected:**
 
+- `README.md`
+
 - `enroll.html`
 
 - `mentors.html`
 
-- `index.html`
-
 - `script.js`
 
-- `README.md`
-
 - `style.css`
+
+- `index.html`
 
 
 ## 🚀 Setup & Deployment
