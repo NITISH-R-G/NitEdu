@@ -27,12 +27,12 @@ graph LR;
 ### Dependency Map
 ```mermaid
 graph TD;
-    "mentors.html" --> "style.css";
-    "mentors.html" --> "script.js";
     "index.html" --> "style.css";
     "index.html" --> "script.js";
     "enroll.html" --> "style.css";
     "enroll.html" --> "script.js";
+    "mentors.html" --> "style.css";
+    "mentors.html" --> "script.js";
 
 ```
 
@@ -42,17 +42,17 @@ The repository contains 3 HTML files, 1 CSS files, and 1 JS files.
 
 **Source Files Detected:**
 
-- `mentors.html`
-
 - `index.html`
-
-- `enroll.html`
 
 - `script.js`
 
+- `README.md`
+
+- `enroll.html`
+
 - `style.css`
 
-- `README.md`
+- `mentors.html`
 
 
 ## 🚀 Setup & Deployment
