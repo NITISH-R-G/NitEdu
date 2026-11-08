@@ -1,15 +1,25 @@
 {
   "files": [
-    "mentors.html",
-    "README.md",
-    "enroll.html",
     "index.html",
+    "style.css",
+    "README.md",
+    "mentors.html",
     "script.js",
-    "style.css"
+    "enroll.html"
   ],
   "directories": [],
   "dependencies": [
     {
+      "source": "index.html",
+      "target": "style.css",
+      "type": "css_link"
+    },
+    {
+      "source": "index.html",
+      "target": "script.js",
+      "type": "script_src"
+    },
+    {
       "source": "mentors.html",
       "target": "style.css",
       "type": "css_link"
@@ -26,16 +36,6 @@
     },
     {
       "source": "enroll.html",
-      "target": "script.js",
-      "type": "script_src"
-    },
-    {
-      "source": "index.html",
-      "target": "style.css",
-      "type": "css_link"
-    },
-    {
-      "source": "index.html",
       "target": "script.js",
       "type": "script_src"
     }
